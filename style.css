@@ -31,10 +31,20 @@ body{
 .button{
     display: inline-flex;
     margin: 10px 0;
-    background-color: #685cfe;
+    background-color: #fff;
     width: 100%;
     height: 55px;
     border-radius: 10px;
+    transition: 0.4s;
+}
+.it{
+    transition: 0.4s;
+}
+.button:hover .it{
+    color: #fff;
+}
+.button:hover{
+    background-color: #685cfe;
 }
 .button > div:nth-child(1){
     display: flex;
@@ -45,16 +55,48 @@ body{
     margin: 0 5px;
     border-radius: 10px;
     font-size: 25px;
-    color: #fff;
+    color: #000;
 }
 .button > div:nth-child(2){
-    color: #fff;
+    color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
     height: 100%;
     font-weight: 600;
+}
+
+
+/* Search */
+.search{
+    background-color: #d0d9ef;
+    display: inline-flex;
+    margin: 10px 0;
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+}
+.search > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    margin: 0 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: #000;
+}
+.search > input{
+    width: 200px;
+    height: 100%;
+    background-color: #d0d9ef;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    font-size: 23px;
 }
 
 
@@ -98,7 +140,7 @@ body{
     height: 550px;
 }
 .Notes-Container .notes{
-    height: 435px;
+    height: 350px;
 }
 .Notes-Container .button{
 
@@ -113,3 +155,70 @@ body{
 }
 
 
+/* Header */
+.container-2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #d0d9ef;
+    width: 75%;
+    height: 98%;
+    margin: 10px;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.innerContainer{
+    margin: 10px 0;
+    width: 100%;
+    height: 86%;
+    background-color: #d0d9ef;
+    display: flex;
+    flex-direction: row;
+}
+.innerContainer > textarea {
+    padding: 20px;
+    width: 90%;
+    height: 88%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    font-size: 23px;
+}
+.quick{
+    width: 100px;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.list{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+.list:hover{
+    background-color: #685cfe;
+    transition: 0.4s;
+    color: #fff;
+}
