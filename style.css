@@ -95,6 +95,7 @@ body{
     width: auto;
     height: 100%;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 
@@ -175,9 +176,7 @@ body{
 .Notes-Container .notes{
     height: 350px;
 }
-.Notes-Container .button{
 
-}
 
 /* Actions Container */
 .Actions{
@@ -186,7 +185,37 @@ body{
     height: auto;
     margin-bottom: 40px;
 }
-
+.switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    margin: 0 8px 0 100px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: transparent;
+    transition: 0.4s;
+}
+#toggle{
+    padding: 2px;
+    width: 45px;
+    height: 25px;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 15px;
+}
+#circle{
+    margin-left: 0;
+    width: 22px;
+    height: 100%;
+    border-radius: 100%;
+    background-color: black;
+    transition: 0.4s;
+}
+#mode-icon{
+    display: flex;
+}
 
 /* Header */
 .container-2{
