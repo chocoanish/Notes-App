@@ -9,7 +9,9 @@ let collapse = document.getElementsByClassName("collapse")[0],
     Switch = document.getElementsByClassName('switch')[0],
     toggle = document.querySelector('#toggle'),
     circle = document.querySelector('#circle'),
-    mode_icon = document.querySelector('#mode-icon');
+    mode_icon = document.querySelector('#mode-icon'),
+    root_elements = document.querySelector(':root'),
+    header = document.getElementsByClassName('header')[0];
 
 
 
@@ -48,9 +50,17 @@ toggle.addEventListener("click",()=>{
     if (circle.style.marginLeft == "50%"){
         circle.style.marginLeft = "0";
         sidebar.style.backgroundColor = "#fff";
+        root_elements.style.setProperty('--text-color','#000');
+        root_elements.style.setProperty('--dark-mode-color','#000');
+        root_elements.style.setProperty('--toggle-mode-color', '#fff')
     }
     else{
+        root_elements.style.setProperty('--text-color','#fff');
+        root_elements.style.setProperty('--dark-mode-color','#fff');
+        root_elements.style.setProperty('--toggle-mode-color', "#000");
         circle.style.marginLeft = "50%";
         sidebar.style.backgroundColor = "#000";
     }
 })
+
+

@@ -3,8 +3,18 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+:root{
+    --bg-color: #d0d9ef;
+    /* --bg-color:#747474; */
+    --white-color: #fff; 
+    --enders-color: #bababa;
+    --button-hover-color: #685cfe; 
+    --text-color: #03001C;
+    --toggle-mode-color: #fff;
+    --dark-mode-color: #03001C;
+}
 body{
-    background-color: #d0d9ef;
+    background-color: var(--bg-color);
 }
 .sidebar{
     overflow: hidden;
@@ -17,14 +27,14 @@ body{
     z-index: 1; 
     top: 0; 
     left: 0;
-    background-color: #fff;
+    background-color: var(--white-color);
     padding: 20px;
     border-radius: 0 10px;
     transition: 0.4s;
 }
 .ender{
     margin: 5px 0;
-    border: 1px solid rgb(195, 195, 195);
+    border: 1px solid var(--enders-color);
 }
 
 /* Collapse Button */
@@ -38,7 +48,7 @@ body{
     width: 30px;
     height: 30px;
     font-size: 20px;
-    background-color: #685cfe;
+    background-color: var(--button-hover-color);
     z-index: 3;
     border-radius: 100px;
     cursor: pointer;
@@ -48,8 +58,8 @@ body{
     margin-left: 2px;
     width: 10px;
     height: 10px;
-    border-left: 3px solid #fff;
-    border-top: 3px solid #fff;
+    border-left: 3px solid var(--white-color);
+    border-top: 3px solid var(--white-color);
     border-radius: 3px;
     transform: rotate(315deg);
 }
@@ -60,7 +70,7 @@ body{
 .button{
     display: inline-flex;
     margin: 10px 0;
-    background-color: #fff;
+    background-color: transparent;
     width: 100%;
     height: 55px;
     border-radius: 10px;
@@ -71,10 +81,10 @@ body{
     transition: 0.4s;
 }
 .button:hover .it{
-    color: #fff;
+    color: var(--white-color);
 }
 .button:hover{
-    background-color: #685cfe;
+    background-color: var(--button-hover-color);
 }
 .button > div:nth-child(1){
     display: flex;
@@ -85,10 +95,10 @@ body{
     margin: 0 5px;
     border-radius: 10px;
     font-size: 25px;
-    color: #000;
+    color: var(--text-color);
 }
 .button > div:nth-child(2){
-    color: #000;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +111,7 @@ body{
 
 /* Search */
 .search{
-    background-color: #d0d9ef;
+    background-color: var(--bg-color);
     display: inline-flex;
     margin: 10px 0;
     width: 100%;
@@ -123,7 +133,7 @@ body{
 .search > input{
     width: 200px;
     height: 100%;
-    background-color: #d0d9ef;
+    background-color: var(--bg-color);
     border: none;
     border-radius: 10px;
     resize: none;
@@ -135,7 +145,7 @@ body{
 
 /* Profile */
 .profile{
-    background-color: white;
+    background-color: transparent;
     width: 100%;
     height: auto;
     display: inline-flex;
@@ -156,11 +166,13 @@ body{
 .profile > div:nth-child(2) > div:nth-child(1){
     font-size: 20px;
     font-weight: bolder;
+    color: var(--text-color);
 }
 .profile > div:nth-child(2) > div:nth-child(2){
     letter-spacing: 1px;
     font-size: 11px;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 
@@ -169,7 +181,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: transparent;
     width: 100%;
     height: 550px;
 }
@@ -180,7 +192,7 @@ body{
 
 /* Actions Container */
 .Actions{
-    background-color: #fff;
+    background-color: transparent;
     width: 100%;
     height: auto;
     margin-bottom: 40px;
@@ -201,8 +213,8 @@ body{
     padding: 2px;
     width: 45px;
     height: 25px;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: 2px solid var(--text-color);
+    background-color: var(--toggle-mode-color);
     border-radius: 15px;
 }
 #circle{
@@ -210,7 +222,7 @@ body{
     width: 22px;
     height: 100%;
     border-radius: 100%;
-    background-color: black;
+    background-color: var(--dark-mode-color);
     transition: 0.4s;
 }
 #mode-icon{
@@ -222,7 +234,7 @@ body{
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #d0d9ef;
+    background-color: var(--bg-color);
     width: 75%;
     height: 98%;
     margin: 10px;
@@ -231,19 +243,21 @@ body{
 .header{
     width: 100%;
     height: 100px;
-    background-color: #fff;
+    background-color: var(--toggle-mode-color);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
+    color: var(--text-color);
+    transition: 0.4s;
 }
 .innerContainer{
     margin: 10px 0;
     width: 100%;
     height: 86%;
-    background-color: #d0d9ef;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: row;
 }
@@ -251,37 +265,41 @@ body{
     padding: 20px;
     width: 90%;
     height: 88%;
-    background-color: #fff;
+    background-color: var(--toggle-mode-color);
     border: none;
     border-radius: 10px;
     resize: none;
     outline: none;
     font-size: 23px;
+    transition: 0.4s;
 }
 .quick{
     width: 100px;
     height: 50%;
-    background-color: #fff;
+    background-color: var(--toggle-mode-color);
     border-radius: 10px;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: 0.4s;
 }
 .list{
     margin: 10px;
     width: 50px;
     height: 50px;
-    background-color: #fff;
+    background-color: var(--toggle-mode-color);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 23px;
+    cursor: pointer;
+    color: var(--text-color);
 }
 .list:hover{
-    background-color: #685cfe;
+    background-color: var(--button-hover-color);
     transition: 0.4s;
-    color: #fff;
+    color: var(--white-color);
 }
