@@ -15,6 +15,10 @@ let collapse = document.getElementsByClassName("collapse")[0],
     header = document.getElementsByClassName('header')[0],
     placeholder = header.getAttribute('data-placeholder'),
     Download = document.getElementsByClassName("link-3")[0],
+    lock = document.getElementsByClassName("link-1")[0],
+    lock_img = document.querySelector('.fa-unlock'),
+    text_link = document.getElementsByClassName("link-2")[0],
+    text = document.getElementsByClassName('fa-t')[0],
     discription = document.querySelector('#discription');
 
 // Download File Content
@@ -30,6 +34,35 @@ Download.addEventListener("click",()=>{
     link.download = "Note.txt";
     // Add click event to <a> tag to save file.
     link.click();
+})
+
+// Textarea Locker
+lock.addEventListener("click",()=>{
+    if(discription.disabled == true){
+        lock_img.classList.add("fa-unlock");
+        lock_img.classList.remove("fa-lock")
+        discription.disabled = false;
+    }
+    else{
+        lock_img.classList.remove("fa-unlock");
+        lock_img.classList.add("fa-lock")
+        discription.disabled = true;
+    }
+})
+
+
+// Text Function
+text_link.addEventListener("click",()=>{
+    if(discription.style.fontWeight == "900"){
+        discription.style.fontWeight = "400";
+        text.classList.remove("fa-solid");
+        text.classList.add("fa-regular");
+    }
+    else{
+        text.classList.add("fa-solid");
+        text.classList.remove("fa-regular");
+        discription.style.fontWeight = "900";
+    }
 })
 
 

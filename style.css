@@ -11,7 +11,7 @@
     --button-hover-color: #685cfe; 
     --text-color: #03001C;
     --toggle-mode-color: #fff;
-    --dark-mode-color: #03001C;
+    --dark-mode-color: #2c3639;
 }
 body{
     background-color: var(--bg-color);
@@ -268,7 +268,7 @@ body{
     display: flex;
     flex-direction: row;
 }
-.innerContainer > textarea {
+#discription{
     padding: 20px;
     width: 90%;
     height: 88%;
@@ -278,6 +278,7 @@ body{
     resize: none;
     outline: none;
     font-size: 23px;
+    font-weight: 400;
     color: var(--text-color);
     transition: 0.4s;
 }
